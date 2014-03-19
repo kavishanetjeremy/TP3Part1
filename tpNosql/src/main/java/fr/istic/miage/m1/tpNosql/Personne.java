@@ -32,15 +32,14 @@ public class Personne {
 		// TODO Auto-generated method stub
 		liste_adresses.add(address);
 	}
+	@Override
+	public String toString() {
+		return "Personne [name=" + name + "]";
+	}
 	
-	public void getAdress(){
-		if (!liste_adresses.isEmpty()){
-			for (Adress a:liste_adresses) {
-				System.out.println(a.getStreet() + " " + a.getCity()+"  "+a.getPostCode() +" "+a.getCountry());
-			}
-		}
-	} 
-	
+	public List<Adress> get_Liste_adresses () {
+		return liste_adresses;
+	}
 	
 
 }

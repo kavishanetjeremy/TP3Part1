@@ -15,7 +15,8 @@ public class Article {
 	@Id private ObjectId id;
 	private String name;
 	private int stars;
-	@Reference private List<Personne> liste_personne = new ArrayList<Personne>();
+	
+	@Reference private List<Personne> liste_acheteur = new ArrayList<Personne>();
 	
 	public String getName() {
 		return name;
@@ -30,5 +31,15 @@ public class Article {
 		this.stars = stars;
 	}
 	
+	public void ajoute_acheteur(Personne p){
+		liste_acheteur.add(p);
+	}
+	@Override
+	public String toString() {
+		return "Article [name=" + name + ", stars=" + stars + "]";
+	}
 	
+	public List<Personne> get_Liste_acheteur() {
+		return liste_acheteur;
+	}
 }
